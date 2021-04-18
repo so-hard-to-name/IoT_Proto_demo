@@ -1,0 +1,24 @@
+About the running
+    - port 8080 and 8081 are needed
+    - port 8080 is used to show data and history in browser (can be modified in server.py line 6)
+    - port 8081 is used to listen to the data sent from sensor or devices (can be modified in soc.py line 5)
+
+About the file
+    - server.py -> for user to check the data
+    - client.py -> (for test)send data to socket server and save the data
+    - soc.py    -> Socket server to get the data from sensor or devices
+    - temperature.txt -> A txt file used to save data, normally it should be a database
+
+Usage
+    - server.py
+        * run the file and open the "localhost:8080" in browser to see the data
+    - soc.py & client.py (for test)
+        * run soc.py to start the socket server
+        * run client.py to send data to server
+        * the data will be handled and saved in file "temperature.txt"
+    
+    - When test with sensor/devices
+        * Please only send the temperature value (for example: 23)
+        * Connect the computer and the devices to the same Wifi or local network
+        * Check the IP address of computer and set address "IP Address:8081"(if changed int he .py file, also change it here)
+        
